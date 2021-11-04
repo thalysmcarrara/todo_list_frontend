@@ -20,5 +20,12 @@
         "react"
     ],
     "rules": {
+        "jsx-a11y/label-has-associated-control": [ 0, {
+            "labelComponents": ["CustomLabel"],
+            "labelAttributes": ["inputLabel"],
+            "controlComponents": ["CustomInput"],
+            "assert": "both",
+            "depth": 3
+        }]
     }
 }
