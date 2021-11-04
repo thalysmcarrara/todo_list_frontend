@@ -1,7 +1,7 @@
 import React from 'react';
 import { screen, cleanup } from '@testing-library/react';
-import renderWithRouter from '../helpers/renderWithRouter';
 import userEvent from '@testing-library/user-event';
+import renderWithRouter from '../helpers/renderWithRouter';
 import App from '../../App';
 
 const LOGIN_BTN = 'login-btn';
