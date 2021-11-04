@@ -1,11 +1,11 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 
 const MainRoutes = () => (
-  <Routes>
-    <Route path="/" element={ <Home /> } />
-  </Routes>
+  <Switch>
+    <Route path="/" component={ Home } />
+  </Switch>
 );
 
 export default MainRoutes;
