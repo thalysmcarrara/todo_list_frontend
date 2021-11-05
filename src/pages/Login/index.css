@@ -39,21 +39,3 @@
 .title-login {
   margin-bottom: 35px;
 }
-
-.login-button {
-  border-radius: 50%;
-  background: #f1e9e9;
-  box-shadow:  5px 5px 10px #757474,
-            -5px -5px 10px #757474;
-  border: none;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  left: 40%;
-  bottom: -50px;
-  transition: all 0.3s ease;
-}
-
-.login-button:hover {
-  background: #5264AE;
-}

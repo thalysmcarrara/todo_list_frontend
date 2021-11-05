@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Home from '../Home';
 import SigninForm from '../../components/SigninForm';
@@ -10,24 +10,37 @@ function Login() {
     history.goBack();
   };
 
+  const [inputEmail, setInputEmail] = useState('');
+  const [inputPassword, setInputPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    history.push('/dashboard');
+  };
+
   return (
     <>
       <Home />
       <div className="modal">
         <div className="modal-card">
-          <button onClick={ handleClick } type="button" className="close-button">
+          <button
+            data-testid="signin-close-button"
+            onClick={ handleClick }
+            type="button"
+            className="close-button"
+          >
             <span className="material-icons">
               close
             </span>
           </button>
           <h2 className="title-login">Login</h2>
-          <SigninForm />
-          <a href>Dont have an account?</a>
-          <button type="button" className="login-button">
-            <span className="material-icons">
-              arrow_forward
-            </span>
-          </button>
+          <SigninForm
+            handleSubmit={ handleSubmit }
+            inputEmail={ inputEmail }
+            setInputEmail={ setInputEmail }
+            inputPassword={ inputPassword }
+            setInputPassword={ setInputPassword }
+          />
         </div>
       </div>
     </>
